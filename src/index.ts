@@ -11,8 +11,11 @@ class AppContainer extends HTMLElement {
     }
 
     render() {
-        const something = this.ownerDocument.createElement('app-container');
-        this.shadowRoot?.appendChild(something);
+        const appCont = this.ownerDocument.createElement('app-container');
+        const appDashboard = this.ownerDocument.createElement('jk-display')
+        appCont.appendChild(appDashboard)
+        
+        this.shadowRoot?.appendChild(appCont);
     }
 }
 
